@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+This assumes you have ruby already installed on your machine.
+See `.ruby-version` for the version used here.
 
-* Ruby version
+- Install: `bundle install`.
+- Setup: `bin/rails db:setup`.
+- Start server: `bin/dev`.
 
-* System dependencies
+## The test
 
-* Configuration
+Figma file: https://www.figma.com/design/6XHByblmhiYRDWbJMHpbnV/UI-test?node-id=0-1&t=M2yWNIYfdmO7220D-1.
 
-* Database creation
+The instructions here are not detailed by design.
+You are being judged on your styling skills as well as your attention to detail and thoroughness.
+The more thorough you are, the higher your polish, and the more production-ready this is, the better.
 
-* Database initialization
+Before you begin, fork this repo and make an empty git commit.
 
-* How to run the test suite
+Create a seaparte pull request for each test.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Style games
 
-* Deployment instructions
+Go to `http://localhost:3000/games`.
+Style each game based on the figma file.
 
-* ...
+### Add the footer
+
+The links don't need to go anywhere.
