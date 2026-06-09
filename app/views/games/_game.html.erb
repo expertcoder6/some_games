@@ -1,8 +1,11 @@
 <div class="col">
   <%= link_to game, id: dom_id(game), class: "card game-card h-100" do %>
     <div class="game-card__media">
-      <%= image_tag "board_game_images/#{game.name}.jpg", class: "card-img-top",
-            alt: game.name, loading: "lazy" %>
+      <% if game.cover.attached? %>
+        <%= image_tag game.cover, class: "card-img-top", alt: game.name, loading: "lazy", onerror: "this.onerror=null;this.src='#{image_path('game-bg.png')}';" %>
+      <% else %>
+        <%= image_tag "board_game_images/#{game.name}.jpg", class: "card-img-top", alt: game.name, loading: "lazy", onerror: "this.onerror=null;this.src='#{image_path('game-bg.png')}';" %>
+      <% end %>
     </div>
 
     <div class="card-body game-card__details">
