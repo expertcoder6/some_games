@@ -7,4 +7,9 @@ class Game < ApplicationRecord
     :as_is     => 4,
   }
 
+  # Price stored as integer cents; expose dollars for display (e.g. number_to_currency).
+  def price
+    price_cents.to_d / 100
+  end
+
 end
