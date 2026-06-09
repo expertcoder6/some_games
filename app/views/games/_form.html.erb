@@ -17,6 +17,11 @@
   </div>
 
   <div class="mb-3">
+    <%= form.label :cover, class: "form-label" %>
+    <%= form.file_field :cover, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
     <%= form.label :condition, class: "form-label" %>
     <%= form.select :condition,
           Game.conditions.keys.map { |c| [c.titleize, c] },
