@@ -1,5 +1,7 @@
 class Game < ApplicationRecord
 
+  has_one_attached :cover
+
   enum :condition, {
     :mint      => 1,
     :excellent => 2,

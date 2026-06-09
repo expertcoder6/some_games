@@ -8,7 +8,11 @@
 
     <article class="card game-show">
       <div class="game-show__media">
-        <%= image_tag "board_game_images/#{@game.name}.jpg", class: "card-img-top", alt: @game.name %>
+        <% if @game.cover.attached? %>
+          <%= image_tag @game.cover, class: "card-img-top", alt: @game.name, onerror: "this.onerror=null;this.src='#{image_path('game-bg.png')}';" %>
+        <% else %>
+          <%= image_tag "board_game_images/#{@game.name}.jpg", class: "card-img-top", alt: @game.name, onerror: "this.onerror=null;this.src='#{image_path('game-bg.png')}';" %>
+        <% end %>
       </div>
 
       <div class="card-body game-show__body">
